@@ -231,36 +231,7 @@ def song1_Mode():
 
         SCREEN.blit(SONG1_MODE_MOUSE_TEXT, SONG1_MODE_RECT)
 
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                click.play()
-                pygame.quit()
-                sys.exit()
-            if event.type == pygame.MOUSEBUTTONDOWN:
-                if BACK_BUTTON.checkForInput(SONG1_MODE_MOUSE_POS):
-                    click.play()
-                    play()
-
-                if MUSIC_ON.checkForInput(SONG1_MODE_MOUSE_POS):
-                    click.play()
-                    mixer.music.set_volume(1.0)
-                    options()
-
-                if MUSIC_OFF.checkForInput(SONG1_MODE_MOUSE_POS):
-                    click.play()
-                    mixer.music.set_volume(0.0)
-                    options()
-
-                if EFFECTS_ON.checkForInput(SONG1_MODE_MOUSE_POS):
-                    click.play()
-                    click.set_volume(1.0)
-                    options()
-
-                if EFFECTS_OFF.checkForInput(SONG1_MODE_MOUSE_POS):
-                    click.play()
-                    click.set_volume(0.0)
-                    options()
-
+        
         
     
 
